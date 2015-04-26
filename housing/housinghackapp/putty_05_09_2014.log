@@ -1,0 +1,138 @@
+SQL> select year_total, datapoint-c  _ci urrency_id from datapoint         member_cae tegory_datapoint   where mem_id=select * from member_category_datapoint                                        11700986        =11700986
+  2  ;
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID
+---------- ---------------------
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID
+---------- ---------------------
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+    100000                   152
+         0                    65
+         0                    65
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID
+---------- ---------------------
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+      2700                    28
+         0                    65
+      2000                   152
+
+31 rows selected.
+
+SQL> select year_total, datapoint_currency_id from member_category_datapoint where mem_id=11700986 and yes ar=2014;
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID
+---------- ---------------------
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+         0                    65
+    100000                   152
+         0                    65
+         0                    65
+         0                    65
+      2700                    28
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID
+---------- ---------------------
+         0                    65
+      2000                   152
+
+13 rows selected.
+
+SQL>  select year_total, datapoint_currency_id, year from member_category_datapoint where mem_id=11700986 and year=2014;
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID       YEAR
+---------- --------------------- ----------
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+    100000                   152       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+      2700                    28       2014
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID       YEAR
+---------- --------------------- ----------
+         0                    65       2014
+      2000                   152       2014
+
+13 rows selected.
+
+SQL> /
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID       YEAR
+---------- --------------------- ----------
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+    100000                   152       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+      3700                    28       2014
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID       YEAR
+---------- --------------------- ----------
+         0                    65       2014
+      2000                   152       2014
+
+13 rows selected.
+
+SQL> /
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID       YEAR
+---------- --------------------- ----------
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+    100000                   152       2014
+         0                    65       2014
+         0                    65       2014
+         0                    65       2014
+      3700                    28       2014
+
+YEAR_TOTAL DATAPOINT_CURRENCY_ID       YEAR
+---------- --------------------- ----------
+         0                    65       2014
+      2000                   152       2014
+
+13 rows selected.
+
+SQL> 

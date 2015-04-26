@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+	{% block body %}
+		<!-- Header and Nav -->
+		<div class="row">
+			<div class="large-3 columns">
+				<h1><img src="" /></h1>
+			</div>
+		</div>
+		<!-- End Header and Nav -->
+
+		<!-- Main Content Section -->
+		<!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+		<div class="row">
+			<div class="">
+				<h3>A binary House @Housing #RealHack 2015</h3>
+			
+				<br />
+				<h5>Abstract:</h5>
+				<br />
+
+
+				<div>We have built an application which returns any news or web article dynamically.<br/><br/>
+We have created an API which receives the request with url of any article as a parameter and return the articles text. <div>
+			</div>
+
+			<!-- Nav Sidebar -->
+			<!-- This is source ordered to be pulled to the left on larger screens -->
+			<div class="large-3 pull-9 columns">
+				<ul class="side-nav">
+					<li><a href="/"></a></li>
+				
+				</ul>
+			</div>
+		</div>
+	{% endblock %}
+</html>

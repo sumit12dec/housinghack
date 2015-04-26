@@ -1,0 +1,6 @@
+Tethering#hotspot
+
+
+We are trying to solve the problem statement 3 where in we have thought of a solution which we implement in real life scenario when we come across such rumours which could be true or false.
+What we do is , we google the story and go through 3-4 trustworthy articles and find out if it was really true.
+We are trying to do the same using Machine.

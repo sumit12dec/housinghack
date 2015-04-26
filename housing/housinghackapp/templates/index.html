@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+	{% block body %}
+		<!-- Header and Nav -->
+		<div class="row">
+			<div class="large-3 columns">
+				<h1><img src="/static/img/housing-real-hack-banner.png" /></h1>
+			</div>
+		</div>
+		<!-- End Header and Nav -->
+
+		<!-- Main Content Section -->
+		<!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+		<div class="row">
+			<div class="large-9 push-3 columns">
+				<h3>Housing #RealHack</h3>
+			</div>
+	
+  <hr/>
+
+  <div class='like' style='display:none;float:right;margin-right:400px;margin-top:60px;'><img src="./static/img/like.png" /> <h3> Seems like a true tweet</h3></div>
+
+  <div class='dislike' style='display:none;float:right;margin-right:400px;margin-top:60px;'><img src="./static/img/dislike.png" /> <h3>Seems like a fake tweet</h3></div>
+
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row collapse">
+        <div class="small-10 columns">
+          <input type="text" id="statement" placeholder="Validate a tweet">
+        </div>
+        <div class="small-2 columns">
+          <a id="go" class="button postfix">Go</a>
+        </div>
+      </div>
+    </div>
+
+
+
+      <div class="small-9 large-10 columns" style="float:left;">
+      <input type="text" id="userpref" placeholder="Enter the website address you want to validate this news against">
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+
+
+function httpGet(theUrl)
+{
+    var xmlHttp = null;
+
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false );
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+	
+$('#go').click(function(){
+
+var statement = document.getElementById('statement').value;
+var a = '/callYahoo?q='+statement;
+var temp = httpGet(a);
+var userpref = document.getElementById('userpref').value;
+if(userpref.length>10){
+
+a = '/callYahoo?q='+statement+'&site='+userpref;
+var temp = httpGet(a);
+}
+
+if(temp=="1"){
+$('.like').stop().fadeIn(500).delay(4000).fadeOut(500);
+}
+else{
+$('.dislike').stop().fadeIn(500).delay(4000).fadeOut(500);
+
+}
+});
+
+</script>
+			<div class="large-3 pull-9 columns">
+				<ul class="side-nav">
+					<li class="active" ><a href="/">Home</a></li>
+
+				</ul>
+			</div>
+		</div>
+
+	{% endblock %}
+</html>
